@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Quicksand";
+  line-height: 1.5;
+  color: black;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+.checkbox {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: transparent;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #979390;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.checkbox:checked {
+  background: #c28434;
+  border: 2px solid #c28434;
+}
+
+.delete-button i {
+  color: #eeba76;
+}
+
+.clear-button:hover {
+  cursor: pointer;
+}
