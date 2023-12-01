@@ -27,6 +27,11 @@ h4 {
 img {
   width: 100%;
 }
+.app{
+  width: 100%;
+  min-height: 100vh;
+  
+}
 .checkbox {
   width: 1.3em;
   height: 1.3em;
@@ -46,6 +51,7 @@ img {
 
 .delete-button i {
   color: #eeba76;
+  cursor: pointer;
 }
 
 .clear-button:hover {
