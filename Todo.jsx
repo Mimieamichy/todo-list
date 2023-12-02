@@ -7,6 +7,7 @@ export default function Todo({
   packed,
   handleCheck,
   handleDelete,
+  darkMode
 }) {
   return (
     <li
@@ -31,10 +32,10 @@ export default function Todo({
             packed
               ? {
                   textDecoration: "line-through",
-                  color: "#b19682",
+                  color: "#eeba76",
                   fontSize: "20px",
                 }
-              : { fontSize: "20px", color: "#979390" }
+              : { fontSize: "20px", color: "#c28434" }
           }
         >
           {title} No.{number}
@@ -42,7 +43,9 @@ export default function Todo({
       </div>
 
       <span onClick={() => handleDelete(id)} className="delete-button">
-        <i className="fa-solid fa-trash-can"></i>
+        <i style={!darkMode ? {color: "white",
+  cursor: "pointer"} : {color: "#eeba76",
+    cursor: "pointer"}}  className="fa-solid fa-trash-can"></i>
       </span>
     </li>
   );

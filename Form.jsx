@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Form({ addTodo }) {
+export default function Form({ addTodo, }) {
   const [title, setTitle] = React.useState("");
   const [number, setNumber] = React.useState(0);
 
@@ -17,6 +17,8 @@ export default function Form({ addTodo }) {
 
     addTodo(newTodo);
     setTitle("");
+
+    
   };
   const handleCount = () => {
     setNumber(number + 1);

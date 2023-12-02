@@ -5,6 +5,7 @@ import TodoList from "../TodoList";
 
 export default function App() {
   const [todo, setTodo] = React.useState([]);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   const addTodo = (nTodo) => {
     setTodo((preValue) => [...preValue, nTodo]);
@@ -22,15 +23,28 @@ export default function App() {
 
   const handleClear = () => {
     setTodo([]);
+    
+    
   };
+  const handleDark = () => {
+    setDarkMode(!darkMode)
+  }
+  
 
   return (
     <div
-      style={{
-        width: "60%",
-        margin: "0 auto",
-      }}
+      style={
+        !darkMode
+          ? { background: "#202C33" }
+          : { background: "white" }
+         
+          
+      }
+      
+      className="app"
     >
+      
+       {console.log(darkMode)}
       <Nav />
       <Form addTodo={addTodo} />
       <TodoList
@@ -38,6 +52,8 @@ export default function App() {
         handleCheck={handleCheck}
         handleDelete={handleDelete}
         handleClear={handleClear}
+        handleDark={handleDark}
+        darkMode={darkMode}
       />
     </div>
   );
